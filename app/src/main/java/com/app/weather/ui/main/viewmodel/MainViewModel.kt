@@ -1,6 +1,5 @@
 package com.app.weather.ui.main.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.app.weather.model.google_places.PlaceDetailsModel
 import com.app.weather.model.google_places.SearchPlaceModel
@@ -9,17 +8,14 @@ import com.app.weather.model.weather.WeatherModel
 import com.app.weather.network.AppRepository
 import com.app.weather.network.retrofit.CallbackWrapper
 import com.app.weather.ui.base.BaseViewModel
-import com.app.weather.utils.Singleton
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class MainViewModel(private val repository: AppRepository) : BaseViewModel() {
     var response: MutableLiveData<WeatherModel> = MutableLiveData()
-    var localWeatherList: MutableLiveData<ArrayList<WeatherModel>> = MutableLiveData()
     var errorResponse: MutableLiveData<String> = MutableLiveData()
 
     var places: MutableLiveData<MutableList<SearchPlaceModel>> = MutableLiveData()
-
     var placeDetails: MutableLiveData<PlaceDetailsModel> = MutableLiveData()
 
     fun getWeatherByLocation(lat: Double, lon: Double) {
@@ -76,7 +72,5 @@ class MainViewModel(private val repository: AppRepository) : BaseViewModel() {
                 })
         )
     }
-
-
 
 }

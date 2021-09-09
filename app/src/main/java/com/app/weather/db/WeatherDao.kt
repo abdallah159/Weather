@@ -15,7 +15,4 @@ interface WeatherDao {
     @Query("Delete FROM weather_table where latitude =:lat and longitude=:lon")
     fun deletePlace(lat : Double, lon :Double)
 
-    @Query("SELECT * FROM weather_table where placeId =:placeId")
-    fun getPlace(placeId: Int) : LiveData<List<WeatherModel>>
-
 }

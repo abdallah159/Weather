@@ -22,8 +22,6 @@ abstract class BaseFragment : Fragment(), BaseViewCallBack {
     lateinit var title: String
 
 
-//    private var mProgressDialog: Dialog? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(false)

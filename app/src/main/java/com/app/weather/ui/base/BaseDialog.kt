@@ -32,17 +32,6 @@ abstract class BaseDialog : DialogFragment(), DialogViewCallBack {
         textString: String, actionString: String?, icon: Drawable?,
         actionListener: View.OnClickListener?
     ) {
-//        progressBar.visibility = View.GONE
-//        errorView.visibility = View.VISIBLE
-//        if (actionString != null) {
-//            errorActionB.setOnClickListener(actionListener)
-//            errorActionB.visibility = View.VISIBLE
-//        }
-//        if (icon != null) {
-//            errorIcon!!.setImageDrawable(icon)
-//        }
-//        errorText.text = textString
-//        errorActionB.text = actionString
     }
 
     override fun onError(
@@ -51,12 +40,6 @@ abstract class BaseDialog : DialogFragment(), DialogViewCallBack {
         @DrawableRes errorIcon: Int,
         errorActionListener: View.OnClickListener?
     ) {
-//        val errorActionString = if (errorActionRes == 0) null else resources.getString(errorActionRes)
-//        val errorActionIcon = if (errorIcon == 0) null else ContextCompat.getDrawable(baseActivity, errorIcon)
-//        onError(resources.getString(errorTextRes),
-//                errorActionString,
-//                errorActionIcon,
-//                errorActionListener)
     }
 
     override fun showLoading() {
@@ -129,11 +112,6 @@ abstract class BaseDialog : DialogFragment(), DialogViewCallBack {
         super.onViewCreated(view, savedInstanceState)
         setUp(view)
     }
-
-//    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view!!, savedInstanceState)
-//        setUp(view)
-//    }
 
     override fun show(fragmentManager: FragmentManager, tag: String?) {
         val transaction = fragmentManager.beginTransaction()

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/black_outline_square_rounded_shape_bg.xml" value="0.2703125" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_close.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_delete.xml" value="0.1707236842105263" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_gps_dark.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_keyboard_arrow_down_black_24dp.xml" value="0.2064814814814815" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_keyboard_arrow_up_black_24dp.xml" value="0.2064814814814815" />
+        <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_loacation_mark.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_save_city.xml" value="0.1707236842105263" />
         <entry key="..\:/Work/Freelance/Weather/app/src/main/res/drawable/ic_search.xml" value="0.2064814814814815" />

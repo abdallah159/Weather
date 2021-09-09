@@ -4,19 +4,17 @@
     <string name="humidity_label">Humidity</string>
     <string name="wind_label">Wind</string>
     <string name="next_days">Next Days</string>
-    <string name="next_15_days_label">Next 15 Days</string>
-    <string name="search_for_a_city_label">Search for a city</string>
-    <string name="zero_label">0%d</string>
-    <string name="wind_unit_label">%.0f km/hr</string>
     <string name="search_label">Search</string>
     <string name="no_internet_message">Please check internet connection</string>
-    <string name="network_exception_message">Network connection problem</string>
-    <string name="retry_label">Retry</string>
-    <string name="ok_label">OK</string>
-    <string name="night_mode_label">Night Mode</string>
     <string name="general_error">Something went wrong</string>
-    <string name="current_location">Current location</string>
     <string name="set_on_map">Set on map</string>
     <string name="london_uk">London, UK</string>
     <string name="cant_find_place_name">Place name not found</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="we_cant_show_your_location">We can\'t show your position because you disabled the location service for your device.</string>
+    <string name="enable">Enable</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="delete_confirmation_message">Are you sure to delete from recnt ?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
 </resources>

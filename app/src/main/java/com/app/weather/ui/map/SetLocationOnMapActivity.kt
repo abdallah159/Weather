@@ -46,6 +46,7 @@ class SetLocationOnMapActivity : BaseActivity(), WorkaroundMapFragment.OnTouchLi
     override fun afterInflation(savedInstance: Bundle?) {
         setupMap()
 
+        closeIV.setOnClickListener { onBackPressed() }
         doneIV.setOnClickListener {
             val returnIntent = Intent()
             returnIntent.putExtra("result", location)
@@ -57,7 +58,7 @@ class SetLocationOnMapActivity : BaseActivity(), WorkaroundMapFragment.OnTouchLi
 
     private fun setupMap() {
         val mapFragment =
-            this?.supportFragmentManager?.findFragmentById(R.id.map) as SupportMapFragment?
+            this.supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
         (mapFragment as WorkaroundMapFragment?)?.run {
             setListener(object : WorkaroundMapFragment.OnTouchListener {
@@ -89,9 +90,9 @@ class SetLocationOnMapActivity : BaseActivity(), WorkaroundMapFragment.OnTouchLi
 
     private fun showLocationIsDisabledAlert() {
         val alertDialog: AlertDialog = AlertDialog.Builder(this, R.style.AlertDialogStyle).create()
-        alertDialog.setTitle("Enable Location")
-        alertDialog.setMessage("We can't show your position because you disabled the location service for your device.")
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Enable") { dialog, _ ->
+        alertDialog.setTitle(getString(R.string.enable_location))
+        alertDialog.setMessage(getString(R.string.we_cant_show_your_location))
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.enable)) { dialog, _ ->
             dialog.dismiss()
             startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
         }
@@ -124,13 +125,13 @@ class SetLocationOnMapActivity : BaseActivity(), WorkaroundMapFragment.OnTouchLi
 
         mMap = googleMap
         if (mMap != null) {
-            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this!!)
-            if (this?.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION)!!
-                && this?.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION)!!
+            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+            if (this.hasPermission(Manifest.permission.ACCESS_FINE_LOCATION)
+                && this.hasPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
             )
                 updateLocationUI()
             else
-                this?.requestPermissionsSafely(
+                this.requestPermissionsSafely(
                     arrayOf(
                         Manifest.permission.ACCESS_FINE_LOCATION,
                         Manifest.permission.ACCESS_COARSE_LOCATION
@@ -150,7 +151,7 @@ class SetLocationOnMapActivity : BaseActivity(), WorkaroundMapFragment.OnTouchLi
             var geocoder = Geocoder(this, Locale.getDefault())
 
             var addresses: List<Address> =
-                geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
+                geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1)
             var cityName = addresses.get(index = 0).getAddressLine(0)
 
             location = LocationModel(latLng.latitude, latLng.longitude, cityName)

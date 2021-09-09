@@ -14,6 +14,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -66,15 +67,26 @@ class MainActivity : BaseActivity() {
             Singleton.instance!!.city = it.placeName
             mainViewModel.getWeatherByLocation(it.latitude, it.longitude)
         }, onItemDeleteClick = {
-            GlobalScope.launch(Dispatchers.IO) {
-                Singleton.instance?.appDatabase?.weatherDao()
-                    ?.deletePlace(it.latitude, it.longitude)
+            var builder = AlertDialog.Builder(this, R.style.AlertDialogTheme)
+            builder.setTitle(getString(R.string.confirm_delete))
+            builder.setMessage(getString(R.string.delete_confirmation_message))
+            builder.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
+                GlobalScope.launch(Dispatchers.IO) {
+                    Singleton.instance?.appDatabase?.weatherDao()
+                        ?.deletePlace(it.latitude, it.longitude)
+                }
+                dialog.cancel()
             }
+            builder.setNegativeButton(getString(R.string.no)) { dialog, _ ->
+                dialog.cancel()
+            }
+            var alert = builder.create()
+            alert.show()
+
         })
 
-    var daysAdapter = DaysAdapter(mutableListOf()) {
+    var daysAdapter = DaysAdapter(mutableListOf())
 
-    }
     var searchAdapter = SearchAdapter(mutableListOf(), onItemClicked = {
         mainViewModel.places.value?.get(it)?.place_id?.let { it1 ->
             mainViewModel.getPlaceDetails(

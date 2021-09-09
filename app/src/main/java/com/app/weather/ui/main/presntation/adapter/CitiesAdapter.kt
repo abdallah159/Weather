@@ -1,17 +1,16 @@
 package com.app.weather.ui.main.presntation.adapter
 
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.app.weather.R
 import com.app.weather.model.weather.WeatherModel
-import com.app.weather.utils.getWeatherIcon
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 
-class CitiesAdapter(val items: MutableList<WeatherModel>,
-                    val onItemClicked: (WeatherModel) -> Unit,
-                    val onItemDeleteClick: (WeatherModel) -> Unit
+class CitiesAdapter(
+    private val items: MutableList<WeatherModel>,
+    val onItemClicked: (WeatherModel) -> Unit,
+    val onItemDeleteClick: (WeatherModel) -> Unit
 ) :
     BaseQuickAdapter<WeatherModel, BaseViewHolder>(R.layout.item_city, items) {
 
