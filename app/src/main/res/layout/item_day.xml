@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="200dp"
+    android:layout_marginEnd="@dimen/spacing_large"
+    android:layoutDirection="locale"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_medium">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:elevation="8dp"
+        app:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/dayLY"
+            android:background="@color/material_blue"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dayTV"
+                style="@style/TextViewInColoredCard"
+                android:layout_width="match_parent"
+                android:text="Thursday"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconIV"
+                android:src="@drawable/ic_rainy_weather"
+                android:layout_width="42dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_height="42dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tempTV"
+                style="@style/TextViewInColoredCard"
+                android:layout_width="match_parent"
+                android:text="20"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layoutDirection="ltr"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/IconInColoredCard"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/minTV"
+                        style="@style/SubTextViewInColoredCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="12"
+                        android:layoutDirection="ltr" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/IconInColoredCard"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/maxTV"
+                        style="@style/TextViewInColoredCard"
+                        android:text="21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layoutDirection="ltr" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+</LinearLayout>

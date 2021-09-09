@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="32dp"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale"
+        android:textDirection="locale"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_loacation_mark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/placeNameTV"
+            android:layoutDirection="locale"
+            android:textDirection="locale"
+            android:layout_height="wrap_content"
+            android:text="Cairo, EG"
+            android:textColor="#E50F0F14"
+            android:layout_marginEnd="16dp"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

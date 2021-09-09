@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Weather" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementsUseOverlay">true</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <!-- Background for the search bar -->
+        <item name="searchBackground">?attr/colorPrimary</item>
+
+        <!-- Change text color for edit text. This will also be the color of the cursor -->
+        <item name="android:textColor">@android:color/black</item>
+
+        <!-- Change hint text color for edit text -->
+        <item name="android:textColorHint">@android:color/black</item>
+
+    </style>
+
+    <style name="TextViewInColoredCard">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="TextViewNormalStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/color_gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewBodyStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="TextViewHeaderStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="IconInColoredCard">
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="SubTextViewInColoredCard">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert" >
+        <item name="android:colorAccent">#99000000</item>
+        <item name="android:colorPrimary">#0091D0</item>
+        <item name="android:windowBackground">@drawable/popup_background</item>
+        <item name="titleTextColor">#000000</item>
+    </style>
+
+</resources>

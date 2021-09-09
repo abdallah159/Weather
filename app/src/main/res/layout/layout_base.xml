@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_base_view"
+        tools:context=".ui.base.BaseActivity"
+        tools:showIn="@layout/activity_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+    <include layout="@layout/progress_dialog"/>
+
+    <include layout="@layout/layout_error"/>
+
+</RelativeLayout>
+
