@@ -22,7 +22,7 @@ android {
             debuggable true
             buildConfigField 'String', 'BASE_URL', '"https://api.openweathermap.org/data/2.5/"'
             buildConfigField 'String', 'GOOGLE_BASE_URL', '"https://maps.googleapis.com/"'
-            buildConfigField 'String', 'GOOGLE_MAPS_API_KEY', '"AIzaSyCzcaPPRlg5v-ul5Xxot5cVbUHX2-nTq7E"'
+            buildConfigField 'String', 'GOOGLE_MAPS_API_KEY', '"AIzaSyCRTRV5vaduEtsgA0AyUD8BbsRFkIjf3bE"'
             buildConfigField 'String', 'WEATHER_API_KEY', '"938c8ade141075a6aeb6f227bbda06f4"'
             buildConfigField 'int', 'DB_VERSION', '8'
         }
@@ -31,7 +31,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField 'String', 'BASE_URL', '"https://api.openweathermap.org/data/2.5/"'
             buildConfigField 'String', 'GOOGLE_BASE_URL', '"https://maps.googleapis.com/"'
-            buildConfigField 'String', 'GOOGLE_MAPS_API_KEY', '"AIzaSyCzcaPPRlg5v-ul5Xxot5cVbUHX2-nTq7E"'
+            buildConfigField 'String', 'GOOGLE_MAPS_API_KEY', '"AIzaSyCRTRV5vaduEtsgA0AyUD8BbsRFkIjf3bE"'
             buildConfigField 'String', 'WEATHER_API_KEY', '"938c8ade141075a6aeb6f227bbda06f4"'
             buildConfigField 'int', 'DB_VERSION', '8'
         }
